@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Monkey Fist</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/logohanu.png" type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <script src="nav&footer.js" type="module"></script>
+    <script src="shopping.js" type="module"></script>
+  </head>
+  <body>
+    <header id="header">
+      <div class="logo">
+        <a href="#">
+          <img
+            src="./img/logohanu.png"
+            alt="Hanuman Monkey fist"
+            id="header-img"
+            width="65"
+          />
+        </a>
+      </div>
+      <nav id="nav-bar">
+        <ul>
+          <li><a class="nav-link" href="#">Features</a></li>
+          <li><a class="nav-link" href="#features">How It Works</a></li>
+          <li><a class="nav-link" href="#pricing">Pricing</a></li>
+          <li>
+            <div class="cart">
+              <i class="fa fa-shopping-cart"></i>
+              <p class="number-of-items">0</p>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="intro">
+      <h1>Hanuman Monkey Fist</h1>
+      <p class="underTitle">Handcrafted, home-made masterpieces</p>
+      <form id="form" action="submit">
+        <input
+          id="email"
+          name="email"
+          type="email"
+          placeholder="Enter your email address"
+          required
+        />
+        <input id="submit" type="submit" value="Get Started" />
+      </form>
+      <p class="submitInfo">🦧 Welcome to Hanuman Moneky Fist! 🦧</p>
+    </section>
+
+    <section id="features">
+      <div class="container">
+        <div class="grid">
+          <div class="icon">
+            <i class="fa fa-3x fa-fire"></i>
+          </div>
+          <div class="desc">
+            <h2>Premium Materials</h2>
+            <p>
+              A throwing monkey's fist can be created by tying around a heavy
+              material such as iron ball, or stone. A floating monkey's fist can
+              be created by tying around a buoyant material such as cork,
+              styrofoam, air filled ring or ball.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="icon">
+            <i class="fa fa-3x fa-truck"></i>
+          </div>
+          <div class="desc">
+            <h2>Fast Shipping</h2>
+            <p>
+              We make sure you recieve your monkey fist as soon as we have
+              finished making it. We also provide free returns if you are not
+              satisfied.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="icon">
+            <i class="fa fa-3x fa-thumbs-up"></i>
+          </div>
+          <div class="desc">
+            <h2>Quality Assurance</h2>
+            <p>
+              For every purchase you make, we will ensure there are no damages
+              or faults and we will check and test the quality of your weapon.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works">
+      <div class="video">
+        <iframe
+          id="video"
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/4kfZEj6qvuE"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </section>
+    <div>
+      <h2 class="sectionTitle">Our products</h2>
+    </div>
+    <section id="pricing">
+      <div class="product" id="product1">
+        <div class="level" id="code1">Keychain</div>
+        <h2 class="price">$4.99</h2>
+        <ol class="item">
+          <li>Lorem ipsum.</li>
+          <li>Lorem ipsum.</li>
+          <li>Lorem ipsum Dolor.</li>
+          <li>Lorem ipsum.</li>
+        </ol>
+        <div class="buttonBox">
+          <button class="btn remove1">➖</button>
+          <p class="number1"></p>
+          <button class="btn btn1">Add To Cart</button>
+        </div>
+      </div>
+
+      <div class="product" id="product2">
+        <div class="level" id="code2">Small</div>
+        <h2 class="price">$7.99</h2>
+        <ol class="item">
+          <li>Lorem ipsum.</li>
+          <li>Lorem ipsum.</li>
+          <li>Lorem ipsum Dolor.</li>
+          <li>Lorem ipsum.</li>
+        </ol>
+        <div class="buttonBox">
+          <button class="btn remove2">➖</button>
+          <p class="number2"></p>
+          <button class="btn btn2">Add To Cart</button>
+        </div>
+      </div>
+
+      <div class="product" id="product3">
+        <div class="level" id="code3">Large</div>
+        <h2 class="price">$9.99</h2>
+        <ol class="item">
+          <li>Lorem ipsum.</li>
+          <li>Lorem ipsum.</li>
+          <li>Lorem ipsum Dolor.</li>
+          <li>Lorem ipsum.</li>
+        </ol>
+        <div class="buttonBox">
+          <button class="btn remove3">➖</button>
+          <p class="number3"></p>
+          <button class="btn btn3">Add To Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="checkoutBtn">
+      <p class="information"></p>
+      <button class="btn goBtn">View Cart</button>
+    </div>
+
+    <div class="shopping-area">
+      <div class="shopping">
+        <div class="small-header">
+          <h2>My Shopping Cart</h2>
+          <i id="close-shopping" class="fa fa-2x fa-times-circle"></i>
+        </div>
+        <hr />
+        <div class="pAndImage">
+          <p class="description1">
+            "You don't have any items in your cart. Let's get shopping!"
+          </p>
+          <img class="noItems" src="./img/no-connection.png" alt="No Items" />
+        </div>
+        <div class="lineBox">
+          <p class="line">
+            <strong class="items-description1"></strong>
+            <span class="right span1"></span>
+          </p>
+        </div>
+        <div class="lineBox">
+          <p class="line">
+            <strong class="items-description2"></strong>
+            <span class="right span2"></span>
+          </p>
+        </div>
+        <div class="lineBox">
+          <p class="line">
+            <strong class="items-description3"></strong>
+            <span class="right span3"></span>
+          </p>
+        </div>
+        <hr />
+        <div class="lineBox">
+          <p class="line">
+            <strong class="shipping"></strong>
+            <span class="right span4"></span>
+          </p>
+        </div>
+        <div class="lineBox">
+          <p class="line">
+            <strong class="tax"></strong> <span class="right span5"></span>
+          </p>
+        </div>
+        <div class="lineBox">
+          <p class="line">
+            <strong class="total"></strong>
+            <span class="right spanTotal"></span>
+          </p>
+        </div>
+        <button class="btn pay">Go to checkout</button>
+      </div>
+    </div>
+
+    <div class="contact-area">
+      <div class="contact">
+        <div class="small-header">
+          <h2>Contact</h2>
+          <i id="close-contact" class="fa fa-2x fa-times-circle"></i>
+        </div>
+        <hr />
+        <div class="pAndImage">
+          <p class="description1">
+            Whatsapp / Phone 📞
+            <a class="phone" href="tel:+15495606252">1-549-560-6252</a>
+          </p>
+          <p class="description1">Fax 000-000-0000</p>
+          <p class="description1">MoneyFistHanuman@mail.com</p>
+
+          <hr />
+          <p class="description1">Address:</p>
+          <p class="description1">865 Tatum Unions Golden Road City</p>
+          <hr />
+          <div class="social">
+            <a href="#" id="media" class="fa fa-3x fa-question-circle"></a>
+            <a href="#" id="media" class="fa fa-3x fa-tags"></a>
+            <a href="#" id="media" class="fa fa-3x fa-truck"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <ul class="foot">
+        <li>
+          <a href="#">Privacy</a>
+        </li>
+        <li>
+          <a href="#">Terms</a>
+        </li>
+        <li>
+          <a class="contactClick" href="javascript:void(0);">Contact</a>
+        </li>
+      </ul>
+      <span class="copy">Copyright 2023, Hanuman Monkey Fist</span>
+    </footer>
+  </body>
+</html>
