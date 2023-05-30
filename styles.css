@@ -616,16 +616,19 @@ hr {
   #features {
     padding-right: 20px;
     padding-left: 20px;
+    margin-top: 40px;
+    margin-bottom: 20px;
   }
 
   #features .icon {
     display: none;
   }
+
   #features .desc {
     width: 100%;
     text-align: center;
     padding: 2px;
-    height: 150px;
+    height: 190px;
   }
 
   .shopping,
