@@ -661,8 +661,9 @@ hr {
   }
 
   .description1 {
-    margin-left: 45px;
-    margin-right: 45px;
+    font-size: 17px;
+    margin-left: 65px;
+    margin-right: 65px;
   }
 
   .pay {
