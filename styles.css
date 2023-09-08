@@ -554,7 +554,7 @@ hr {
         rgba(0, 0, 0, 0.616),
         rgba(253, 220, 157, 0.685)
       ),
-      url(./img/tiger.jpg);
+      url(./img/navBarBackground.jpg);
     flex-wrap: wrap;
     margin: 0;
   }
@@ -616,21 +616,24 @@ hr {
   #features {
     padding-right: 20px;
     padding-left: 20px;
+    margin-top: 40px;
+    margin-bottom: 20px;
   }
 
   #features .icon {
     display: none;
   }
+
   #features .desc {
     width: 100%;
     text-align: center;
     padding: 2px;
-    height: 150px;
+    height: 190px;
   }
 
   .shopping,
   .contact {
-    margin-top: 200px;
+    margin-top: 0px;
     height: 500px;
     width: 95%;
     padding: 20px;
@@ -652,13 +655,19 @@ hr {
   .items-description2,
   .items-description3,
   .shipping,
+  .tax,
   .total {
     font-size: 19px;
   }
 
+  .description1 {
+    margin-left: 45px;
+    margin-right: 45px;
+  }
+
   .pay {
     padding: 10px;
-    margin-top: 50px;
+    margin-top: 20px;
   }
 
   #media {
