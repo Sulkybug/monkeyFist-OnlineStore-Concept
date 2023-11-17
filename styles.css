@@ -695,3 +695,20 @@ hr {
   transition: 0.8s;
   text-shadow: black 2px 0 10px;
 }
+
+.delete-items1 {
+  display: none;
+}
+.delete-items2 {
+  display: none;
+}
+.delete-items3 {
+  display: none;
+}
+
+.delete-items1,
+.delete-items2,
+.delete-items3 {
+  justify-content: center;
+  align-items: center;
+}

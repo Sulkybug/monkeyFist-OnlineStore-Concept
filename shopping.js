@@ -42,6 +42,10 @@ const contactWindow = document.querySelector(".contact-area");
 const closeContactWindow = document.getElementById("close-contact");
 const contactBtn = document.querySelector(".contactClick");
 
+const itemDelete1 = document.querySelector(".delete-items1");
+const itemDelete2 = document.querySelector(".delete-items2");
+const itemDelete3 = document.querySelector(".delete-items3");
+
 //toggle Shoppin Cart Window
 cartButton.addEventListener("click", () => {
   shoppingWindow.style.visibility = "visible";
@@ -76,42 +80,107 @@ let large = new Item("Large", 3, 0, 9.99, 0);
 // Adding to the cart
 
 btnProduct1.addEventListener("click", () => {
-  buttonAction(keychain, product1, remove1, btnProduct1, innerNumber1);
+  buttonAction(
+    keychain,
+    product1,
+    remove1,
+    btnProduct1,
+    innerNumber1,
+    itemDelete1
+  );
 });
 btnProduct2.addEventListener("click", () => {
-  buttonAction(small, product2, remove2, btnProduct2, innerNumber2);
+  buttonAction(
+    small,
+    product2,
+    remove2,
+    btnProduct2,
+    innerNumber2,
+    itemDelete2
+  );
 });
 btnProduct3.addEventListener("click", () => {
-  buttonAction(large, product3, remove3, btnProduct3, innerNumber3);
+  buttonAction(
+    large,
+    product3,
+    remove3,
+    btnProduct3,
+    innerNumber3,
+    itemDelete3
+  );
 });
 
 // Removing from the cart
 
 remove1.addEventListener("click", () => {
-  removeCart(keychain, product1, remove1, btnProduct1, innerNumber1);
+  removeCart(
+    keychain,
+    product1,
+    remove1,
+    btnProduct1,
+    innerNumber1,
+    itemDelete1
+  );
 });
 
 remove2.addEventListener("click", () => {
-  removeCart(small, product2, remove2, btnProduct2, innerNumber2);
+  removeCart(small, product2, remove2, btnProduct2, innerNumber2, itemDelete2);
 });
 
 remove3.addEventListener("click", () => {
-  removeCart(large, product3, remove3, btnProduct3, innerNumber3);
+  removeCart(large, product3, remove3, btnProduct3, innerNumber3, itemDelete3);
 });
 
-function buttonAction(item, product, remove, btnProduct, innerNumber) {
+// Deleting every unit of an item
+
+itemDelete1.addEventListener("click", () => {
+  val = val - keychain.quantity + 1;
+  keychain.quantity = 1;
+
+  removeCart(
+    keychain,
+    product1,
+    remove1,
+    btnProduct1,
+    innerNumber1,
+    itemDelete1
+  );
+});
+
+itemDelete2.addEventListener("click", () => {
+  val = val - small.quantity + 1;
+  small.quantity = 1;
+  removeCart(small, product2, remove2, btnProduct2, innerNumber2, itemDelete2);
+});
+
+itemDelete3.addEventListener("click", () => {
+  val = val - large.quantity + 1;
+  large.quantity = 1;
+  removeCart(large, product3, remove3, btnProduct3, innerNumber3, itemDelete3);
+});
+
+function buttonAction(
+  item,
+  product,
+  remove,
+  btnProduct,
+  innerNumber,
+  itemDelete
+) {
   addToCart();
-  item.quantity++;
-  item.totalPrice = (item.price * item.quantity).toFixed(2);
+  item.addQuantity();
+  item.totalValue();
   product.innerText = `${item.name} - Total $${item.totalPrice}`;
   innerNumber.innerText = ` ${item.quantity}`;
   innerNumber.style.display = "flex";
   product.style.backgroundColor = "rgb(255, 116, 61)";
+  itemDelete.style.display = "flex";
   remove.style.display = "flex";
   btnPay.style.display = "flex";
   noItems.style.display = "none";
   btnProduct.innerText = "➕";
   description();
+  console.log(item);
 }
 
 function addToCart() {
@@ -121,16 +190,24 @@ function addToCart() {
   document.querySelector(".goBtn").style.display = "flex";
 }
 
-function removeCart(item, product, remove, btnProduct, innerNumber) {
+function removeCart(
+  item,
+  product,
+  remove,
+  btnProduct,
+  innerNumber,
+  itemDelete
+) {
   if (val == 0) {
     cartButton.style.textShadow = "initial";
   } else {
     val = val - 1;
     itemsCart.innerText = val;
-    item.quantity--;
-    item.totalPrice = (item.price * item.quantity).toFixed(2);
+    item.reduceQuantiy();
+    item.totalValue();
     if (item.quantity == 0) {
       remove.style.display = "none";
+      itemDelete.style.display = "none";
       product.innerText = `${item.name}`;
       product.style.backgroundColor = "#ddd";
       btnProduct.innerText = "ADD TO CART";
