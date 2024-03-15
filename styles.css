@@ -73,9 +73,7 @@ nav > ul {
 
 #video {
   max-width: 100%;
-  height: 315px;
-  left: 0px;
-  top: 0px;
+  height: 100%;
 }
 
 .intro {
@@ -95,6 +93,8 @@ nav > ul {
     ),
     url(./img/mainBackground.jpg);
   background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
   color: white;
 }
 
@@ -151,9 +151,13 @@ p {
   text-shadow: black 23px 0 10px;
   margin-block-start: 0.2em;
 }
+
 #features {
-  margin-top: 40px;
-  margin-bottom: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0 10px 0;
+  height: 65vh;
 }
 
 section {
@@ -161,9 +165,16 @@ section {
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   max-width: 1000px;
   width: 100%;
+  height: 100%;
   margin: 0 auto;
+  background: linear-gradient(#eeeeeece, #eeeeeece), url(./img/logohanu.png);
+  background-position: center;
+  background-size: center;
 }
 
 .how-it-works {
@@ -172,13 +183,21 @@ section {
 
 .video {
   position: relative;
+  display: flex;
   width: 100%;
+  height: 50vh;
   align-items: center;
   justify-content: center;
-  text-align: center;
   z-index: 0;
-  margin-top: 80px;
+  padding: 50px 0 50px 0;
   margin-bottom: 80px;
+  background: linear-gradient(
+      rgba(7, 14, 7, 0),
+      rgba(78, 50, 18, 0.466),
+      rgba(7, 7, 7, 0.993)
+    ),
+    url(./img/background.jpg);
+  background-attachment: fixed;
 }
 
 #submit {
@@ -220,6 +239,13 @@ section {
   justify-content: center;
   margin-right: 50px;
   margin-left: 50px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 81, 0, 0.61) 10%,
+    rgba(255, 179, 117, 0.712) 40%,
+    #eee 90%
+  );
+  background-attachment: fixed;
 }
 
 .product > ol {
@@ -275,7 +301,11 @@ ol {
 
 footer {
   margin-top: 30px;
-  background: linear-gradient(rgba(252, 223, 169, 0.247), rgba(0, 0, 0, 0.616)),
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.411) 5%,
+      rgba(78, 50, 18, 0.74) 25%,
+      rgba(7, 7, 7, 0.993) 100%
+    ),
     url(./img/footerBackground.jpg);
   padding: 20px;
   display: block;
@@ -316,11 +346,11 @@ button:hover,
 }
 
 a:hover {
-  font-size: 17px;
+  font-size: 18px;
   color: rgb(250, 94, 33);
   font-weight: bold;
   transition: 0.2s;
-  text-shadow: white 1px 0 10px;
+  text-shadow: black 1px 0 10px;
 }
 
 #media {
@@ -611,6 +641,12 @@ hr {
   }
   #pricing {
     flex-direction: column;
+    background: radial-gradient(
+      circle,
+      rgba(255, 81, 0, 0.61) 10%,
+      rgba(255, 179, 117, 0.712) 30%,
+      #eee 80%
+    );
   }
 
   #features {
@@ -618,6 +654,12 @@ hr {
     padding-left: 20px;
     margin-top: 40px;
     margin-bottom: 20px;
+  }
+
+  .container {
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
   }
 
   #features .icon {
@@ -711,4 +753,10 @@ hr {
 .delete-items3 {
   justify-content: center;
   align-items: center;
+}
+
+#email {
+  border-radius: 5px;
+  border: none;
+  padding: 4px 0 4px 6px;
 }
