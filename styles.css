@@ -578,6 +578,7 @@ hr {
   width: 300px;
   height: 100px;
 }
+
 @media (max-width: 720px) {
   header {
     background: linear-gradient(
@@ -630,7 +631,7 @@ hr {
   }
 
   .intro {
-    height: 570px;
+    height: 670px;
   }
 
   .product {
@@ -652,8 +653,7 @@ hr {
   #features {
     padding-right: 20px;
     padding-left: 20px;
-    margin-top: 40px;
-    margin-bottom: 20px;
+    height: 75vh;
   }
 
   .container {
@@ -669,8 +669,7 @@ hr {
   #features .desc {
     width: 100%;
     text-align: center;
-    padding: 2px;
-    height: 160px;
+    height: 150px;
   }
 
   .shopping,
