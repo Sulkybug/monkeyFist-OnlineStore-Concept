@@ -73,6 +73,7 @@ nav > ul {
 
 #video {
   max-width: 100%;
+  width: 50vw;
   height: 100%;
 }
 
@@ -579,6 +580,14 @@ hr {
   height: 100px;
 }
 
+.coverBox {
+  background-color: rgba(0, 255, 255, 0);
+  width: 100%;
+  height: 60vh;
+  position: absolute;
+  z-index: 20;
+}
+
 @media (max-width: 720px) {
   header {
     background: linear-gradient(
@@ -648,6 +657,10 @@ hr {
       rgba(255, 179, 117, 0.712) 30%,
       #eee 80%
     );
+  }
+
+  #video {
+    width: 90vw;
   }
 
   #features {
